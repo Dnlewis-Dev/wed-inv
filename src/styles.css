@@ -1,0 +1,169 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0 10px;
+  height: 100%;
+  background: black;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  padding: 15px;
+}
+
+h2 {
+  color: grey;
+  font-size: 14px;
+  margin: 0;
+  padding: 0px;
+}
+
+
+#container {
+  text-align: center;
+  margin: 0;
+}
+
+#container1 {
+	margin: 0px auto;
+	width: 300px;
+	height: 175px;
+	border: 10px #333 solid;
+}
+
+#qr-canvas {
+  margin: auto;
+  width: calc(100% - 20px);
+  max-width: 400px;
+}
+
+#finResult {
+  color: white;
+  font-size: 20px;
+}
+
+#btn-scan-qr {
+  cursor: pointer;
+}
+
+#btn-scan-qr img {
+  height: 10em;
+  padding: 15px;
+  margin: 15px;
+  background: white;
+}
+
+#qr-result {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 0px;
+  max-width: 700px;
+  background-color: white;
+}
+
+#qr-result1 {
+  font-size: 1.2em;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+li{
+  padding: 20px;
+  background: #f6f6f6;
+  font-size: 20px;
+  color: #555;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 46px;
+}
+
+li:nth-child(even){
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+li span{
+  display: block;
+}
+
+li span:nth-child(2){
+  font-size: 16px;
+  margin-top: 6px;
+  color: #999;
+}
+
+li div{
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: rgba(255,255,255,0.6);
+  width: 40px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight:  bold;
+  cursor:  pointer;
+}
+
+form input{
+  float: left;
+  width: 38%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 1%;
+  padding: 10px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+form input:focus{
+  outline: none;
+  border-bottom: 3px solid #88236f;
+  padding-bottom: 8px;
+  transition: all ease 0.2s;
+}
+
+form:after{
+  content: '';
+  clear: both;
+  display: block;
+}
+
+button{
+  border: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 13px;
+  width: 14%;
+  box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+  font-weight: bold;
+  font-family: ubuntu;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+btn-ver{
+  border: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 13px;
+  width: 14%;
+  box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+  font-weight: bold;
+  font-family: ubuntu;
+  letter-spacing: 1px;
+  color: #999;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Code Scanner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <!-- <script src="html5-qrcode.min.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+
+     
+
+      <h1 id="heading"> </h1>
+      
+      
+       
+      <a id="btn-scan-qr" 
+      onClick="jQuery(btn-scan-qr).toggleClass('active')" >
+        <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
+      <a/>
+      <script>
+         // document.getElementById("btn-scan-qr").click();
+      </script>
+       <!-- <script>
+         $(document).ready(function(){ 
+     $('btn-scan-qr')[0].click(function( ){
+     }); 
+});
+
+       </script> -->
+      <canvas hidden="" id="qr-canvas"></canvas>
+      
+      
+      <div id="qr-result" hidden="">
+        <b>Data:</b> <span id="outputData"></span>
+      </div>
+      <!-- <div id="finResult"></div> -->
+      <h1 id="finResult" style="color: goldenrod;"> </h1>
+      
+  <div style="padding-top: 20px;">  <button id="change"> <h2 id="chngtext"></h2></button></div>
+
+  <div style="width: 500px" id="reader"></div>
+  <!-- <div id="container1">
+    <video autoplay="true" id="videoElement">
+    
+    </video>
+  </div> -->
+  <!-- <script>
+  var video1 = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video1.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+
+
+  </script>
+     <script type="text/javascript">
+      let scanner = new Instascan.Scanner({ video: document.getElementById('videoElement') });
+      scanner.addListener('scan', function (content) {
+        alert(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+    </script>
+   -->
+
+    <!-- <div style="padding:190px;" class="content"> -->
+      <!-- <h1>Add Guest</h1>
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="city" placeholder="surname">
+            <button>Add guest</button>
+        </form>
+
+        <ul id="cafe-list"></ul> -->
+
+    </div>
+
+
+
+    <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyDtj4jMp2W3xI3mC2am2gCJc4hcJDcKfB8",
+  authDomain: "wedding-inv-c64b5.firebaseapp.com",
+  projectId: "wedding-inv-c64b5",
+  storageBucket: "wedding-inv-c64b5.appspot.com",
+  messagingSenderId: "257669209795",
+  appId: "1:257669209795:web:f376ca904bca9fbe63cc76",
+  measurementId: "G-3NPGC4Z5C6"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true }); 
+  </script>
+    <script src="./src/qrCodeScanner.js"></script>
+  </body>
+</html>
